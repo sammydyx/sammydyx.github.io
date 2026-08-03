@@ -13,22 +13,22 @@ function ProjectArt({ kind }: { kind: string }) {
 export default function Home() {
   return <main className="site-shell">
     <aside className="sidebar">
-      <a href="#top" className="avatar" aria-label="Lin Yu, back to top"><span>LY</span><i /></a>
-      <h1>Lin Yu</h1>
+      <a href="#top" className="avatar" aria-label="Yingxin Deng, back to top"><span>YD</span><i /></a>
+      <h1>Yingxin Deng</h1>
       <p className="role">Independent Designer<br />&amp; Creative Developer</p>
       <nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav>
-      <section className="side-about" id="about"><h2>About</h2><p>Hi, I’m Lin. I design digital products and expressive web experiences where curiosity meets craft.</p></section>
+      <section className="side-about" id="about"><h2>About</h2><p>Hi, I’m Yingxin. I design digital products and expressive web experiences where curiosity meets craft.</p></section>
       <section className="side-contact" id="contact"><h2>Contact</h2><div><a href="mailto:hello@example.com">Email</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div></section>
     </aside>
 
     <section className="content" id="top">
       <header className="intro-card">
-        <div className="intro-copy"><p className="eyebrow">PORTFOLIO · 2026</p><h2>Hey, I&apos;m Lin.</h2><p>Welcome to my corner of the internet. I enjoy shaping thoughtful, useful, and memorable digital experiences.</p><a href="#work">Explore projects <span>↓</span></a></div>
+        <div className="intro-copy"><p className="eyebrow">PORTFOLIO · 2026</p><h2>Hey, I&apos;m Yingxin.</h2><p>Welcome to my corner of the internet. I enjoy shaping thoughtful, useful, and memorable digital experiences.</p><a href="#work">Explore projects <span>↓</span></a></div>
         <div className="now-card"><p>Currently</p><strong>Designing<br /><em>what&apos;s next.</em></strong><div className="now-grid"><span><b>06</b> years making</span><span><b>24</b> projects launched</span></div><a href="mailto:hello@example.com">Start a conversation ↗</a></div>
       </header>
 
       <section className="projects" id="work"><div className="section-title"><h2>Projects</h2><p>Selected work, 2024–2026</p></div><div className="project-grid">{projects.map((project) => <article className="project-card" key={project.title}><ProjectArt kind={project.art} /><div className="project-info"><p className="project-date">{project.date} · {project.type}</p><h3>{project.title}</h3><p>{project.copy}</p><a href={`mailto:hello@example.com?subject=Project inquiry: ${project.title}`}>View project <span>↗</span></a></div></article>)}</div></section>
-      <footer>© 2026 Lin Yu <span>Designed with curiosity.</span></footer>
+      <footer>© 2026 Yingxin Deng <span>Designed with curiosity.</span></footer>
     </section>
   </main>;
 }
