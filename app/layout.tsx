@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sammydyx.github.io"),
   title: "Lin Yu — Independent Designer & Creative Developer",
   description: "Lin Yu’s portfolio for digital products, brand experiences, and creative development.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
