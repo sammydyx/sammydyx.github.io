@@ -1,34 +1,16 @@
 const projects = [
-  { title: "Hearth", date: "2025", type: "Product design", copy: "A living experience platform that helps young urban renters turn a new space into home.", art: "hearth" },
-  { title: "Afterglow", date: "2025", type: "Creative development", copy: "An immersive digital exhibition that lets time, sound, and art respond to each visitor.", art: "afterglow" },
-  { title: "Seasonal Table", date: "2024", type: "Mobile product", copy: "A seasonal food companion that brings together stories, community, and everyday choices.", art: "table" },
+  { title: "Pockit App", date: "Jul 2026", type: "Product design · Full-stack web", image: "/projects/pockit.png", link: "https://github.com/keemothy/Pockit", copy: "A personal-finance platform for young adults, bringing subscriptions, credit cards, spending insights, and upcoming payments into one dashboard." },
+  { title: "Quantitative Wheel Strategy Backtesting", date: "May 2026", type: "Python · Quantitative finance", image: "/projects/wheel.png", link: "https://github.com/sammydyx/quant-wheel-strategy-backtest", copy: "A Python backtesting framework that compares an options Wheel Strategy with a passive SPY buy-and-hold benchmark." },
+  { title: "Structural Temperature Regulation Cost Analysis", date: "Feb 2025", type: "MATLAB · Energy analysis", image: "/projects/temperature.png", link: "https://github.com/sammydyx/Impact-of-Structural-Design-on-Temperature-Regulation-Costs/blob/main/matlab%20epic%20quest%203%20Poster.pptx.pdf", copy: "A data-driven study of insulation designs, heat transfer, yearly energy use, and temperature-regulation costs." },
+  { title: "Vehicle Performance Analysis with OBD-II Data", date: "Jan 2025", type: "MATLAB · Data modeling", image: "/projects/obd.png", link: "https://github.com/sammydyx/OBD-II-HONDA-ACCORD-performance/blob/main/Final_report_Team_Apollo_13.pdf", copy: "A MATLAB system using OBD-II sensor data to model speed, acceleration, engine RPM, and fuel consumption." },
+  { title: "Raspberry Pi Sense HAT Visualization", date: "Feb 2025", type: "MATLAB · Hardware", image: "/projects/raspberry-pi.png", link: "https://github.com/sammydyx/Raspberry-Pi-Visualization/blob/main/Epic%20Quest2%20.pptx", copy: "A MATLAB-to-hardware visualization pipeline that converts image data into an 8 × 8 × 3 RGB display on a Raspberry Pi Sense HAT." },
+  { title: "Build Your Own World", date: "Apr 2024", type: "Java · Game development", image: "/projects/byow.png", link: "https://sp25.datastructur.es/projects/proj3/", copy: "A procedurally generated 2D tile-based game with player movement, collision handling, and interactive game-state systems." },
+  { title: "Ants vs. Some Bees", date: "Oct 2023", type: "Python · Game development", image: "/projects/ants.png", link: "https://cs61a.org/proj/ants/", copy: "A strategy tower-defense game built with Python and the UC Berkeley CS 61A teaching framework." },
 ];
-
-function ProjectArt({ kind }: { kind: string }) {
-  if (kind === "hearth") return <div className="art hearth" aria-hidden="true"><span className="art-sun" /><div className="art-house"><i /><b /></div><small>HOME, REIMAGINED</small></div>;
-  if (kind === "afterglow") return <div className="art afterglow" aria-hidden="true"><i /><i /><strong>AFTER<br />GLOW</strong><small>TIME / LIGHT / MEMORY</small></div>;
-  return <div className="art table" aria-hidden="true"><div className="plate"><i /><i /><i /></div><strong>SEASONAL<br />TABLE</strong></div>;
-}
 
 export default function Home() {
   return <main className="site-shell">
-    <aside className="sidebar">
-      <a href="#top" className="avatar" aria-label="Yingxin Deng, back to top"><span>YD</span><i /></a>
-      <h1>Yingxin Deng</h1>
-      <p className="role">Independent Designer<br />&amp; Creative Developer</p>
-      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav>
-      <section className="side-about" id="about"><h2>About</h2><p>Hi, I’m Yingxin. I design digital products and expressive web experiences where curiosity meets craft.</p></section>
-      <section className="side-contact" id="contact"><h2>Contact</h2><div><a href="mailto:hello@example.com">Email</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div></section>
-    </aside>
-
-    <section className="content" id="top">
-      <header className="intro-card">
-        <div className="intro-copy"><p className="eyebrow">PORTFOLIO · 2026</p><h2>Hey, I&apos;m Yingxin.</h2><p>Welcome to my corner of the internet. I enjoy shaping thoughtful, useful, and memorable digital experiences.</p><a href="#work">Explore projects <span>↓</span></a></div>
-        <div className="now-card"><p>Currently</p><strong>Designing<br /><em>what&apos;s next.</em></strong><div className="now-grid"><span><b>06</b> years making</span><span><b>24</b> projects launched</span></div><a href="mailto:hello@example.com">Start a conversation ↗</a></div>
-      </header>
-
-      <section className="projects" id="work"><div className="section-title"><h2>Projects</h2><p>Selected work, 2024–2026</p></div><div className="project-grid">{projects.map((project) => <article className="project-card" key={project.title}><ProjectArt kind={project.art} /><div className="project-info"><p className="project-date">{project.date} · {project.type}</p><h3>{project.title}</h3><p>{project.copy}</p><a href={`mailto:hello@example.com?subject=Project inquiry: ${project.title}`}>View project <span>↗</span></a></div></article>)}</div></section>
-      <footer>© 2026 Yingxin Deng <span>Designed with curiosity.</span></footer>
-    </section>
+    <aside className="sidebar"><a href="#top" className="avatar" aria-label="Yingxin Deng, back to top"><span>YD</span><i /></a><h1>Yingxin Deng</h1><p className="role">Statistics @ UC Berkeley<br />CS Minor · Builder &amp; Designer</p><nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav><section className="side-about" id="about"><h2>About</h2><p>I’m a senior at UC Berkeley studying Statistics with a minor in Computer Science. This is where design meets code.</p></section><section className="side-contact" id="contact"><h2>Contact</h2><div><a href="mailto:sammydyx@berkeley.edu">Email</a><a href="https://www.linkedin.com/in/sammy-deng-415637255" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/sammydyx" target="_blank" rel="noreferrer">GitHub</a></div></section></aside>
+    <section className="content" id="top"><header className="intro-card"><div className="intro-copy"><p className="eyebrow">PORTFOLIO · 2026</p><h2>Hey, I&apos;m Yingxin.</h2><p>Welcome to my creative space, where design meets code. I build thoughtful products, data-driven tools, and playful interactive experiences.</p><a href="#work">Explore projects <span>↓</span></a></div><div className="now-card"><p>Current focus</p><strong>Data, design,<br /><em>and systems.</em></strong><div className="now-grid"><span><b>07</b> public projects</span><span><b>UC</b> Berkeley</span></div><a href="mailto:sammydyx@berkeley.edu">Start a conversation ↗</a></div></header><section className="projects" id="work"><div className="section-title"><h2>Projects</h2><p>Selected work, 2023–2026</p></div><div className="project-grid">{projects.map((project) => <article className="project-card" key={project.title}><img src={project.image} alt={project.title + " project preview"} style={{ width: "100%", height: "235px", display: "block", objectFit: "cover" }} /><div className="project-info"><p className="project-date">{project.date} · {project.type}</p><h3>{project.title}</h3><p>{project.copy}</p><a href={project.link} target="_blank" rel="noreferrer">View project <span>↗</span></a></div></article>)}</div></section><footer>© 2026 Yingxin Deng <span>Designed with curiosity.</span></footer></section>
   </main>;
 }
